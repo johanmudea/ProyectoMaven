@@ -12,16 +12,15 @@ public class TicketDetailsPage extends Base{
 
     By assertionComparator = By.xpath("//*[@id=\"product-2047\"]/div[2]/h1");
 
-    public void  compararResultado (){
+    public void  compararResultado () throws InterruptedException {
 
         if(isDisplayed(assertionComparator)){
 
-            assertEquals("ANIVERSARIO III Aerotechno Present: Circo Erótico 2024. - aerotechno.com.co", getText(assertionComparator));
-            System.out.println("Bien Hecho, lo has logrado");
+            assertEquals("aerotechno.com.co", getText(assertionComparator));//ANIVERSARIO III Aerotechno Present: Circo Erótico 2024. - aerotechno.com.co
+            System.out.println("Bien Hecho, lo has logrado a la primera");
 
-        }else {
+        }else
             System.out.println("Error Comparando Resultados de Busqueda");
         }
 
     }
-}

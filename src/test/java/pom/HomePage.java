@@ -12,7 +12,6 @@ public class HomePage extends Base {
     public void irTienda () throws InterruptedException {
         isDisplayed(ticketsMenu);
         click(ticketsMenu);
-        Thread.sleep(20000);
 
     }
 

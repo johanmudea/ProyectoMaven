@@ -1,5 +1,6 @@
 package pom;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,11 +14,12 @@ public class Base {
     private WebDriver driver;
 
     public Base(WebDriver driver){
-        driver=driver;
+        this.driver=driver;
     }
 
     public WebDriver firefoxDriverConection(){
-        System.setProperty("webdriver.gecko.driver", "./src/main/resources/driver/geckodriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "./src/main/resources/driver/geckodriver.exe");
+        WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         //options.addArguments("-private");
         driver = new FirefoxDriver(options);
